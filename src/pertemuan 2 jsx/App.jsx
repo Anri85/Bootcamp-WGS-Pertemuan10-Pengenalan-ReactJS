@@ -1,5 +1,4 @@
-// import logo from "./logo.svg";
-
+// pertemuan 2 belajar jsx
 function App({ name, job }) {
     return (
         <h1>
