@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import { faker } from "@faker-js/faker";
 
 import App from "./App";
 
@@ -9,16 +10,19 @@ const arr = [
         name: "Arya",
         comment: "This is awesome",
         date: new Date().toDateString(),
+        avatar: faker.image.avatar(),
     },
     {
         name: "Desi",
         comment: "You did well",
         date: new Date().toDateString(),
+        avatar: faker.image.avatar(),
     },
     {
         name: "Reza",
         comment: "Congratulation",
         date: new Date().toDateString(),
+        avatar: faker.image.avatar(),
     },
 ];
 
