@@ -1,14 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import { faker } from "@faker-js/faker";
 
 import App from "./App";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
     <React.StrictMode>
-        {/* menambahkan tampilan nav pada fungsi render */}
-        <App name={"Ramdhani Arya"} job={"Peserta bootcamp batch 3"} />
-        <App name={"Jokowi"} job={"Presiden"} />
+        <App name={faker.name.findName()} avatar={faker.image.avatar()} comment={faker.lorem.lines()} date={new Date().toDateString()} />
+        <App name={faker.name.findName()} avatar={faker.image.avatar()} comment={faker.lorem.lines()} date={new Date().toDateString()} />
+        <App name={faker.name.findName()} avatar={faker.image.avatar()} comment={faker.lorem.lines()} date={new Date().toDateString()} />
     </React.StrictMode>
 );
 
