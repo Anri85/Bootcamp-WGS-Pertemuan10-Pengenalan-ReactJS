@@ -4,11 +4,27 @@ import ReactDOM from "react-dom/client";
 import App from "./App";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
+const arr = [
+    {
+        name: "Arya",
+        comment: "This is awesome",
+        date: new Date().toDateString(),
+    },
+    {
+        name: "Desi",
+        comment: "You did well",
+        date: new Date().toDateString(),
+    },
+    {
+        name: "Reza",
+        comment: "Congratulation",
+        date: new Date().toDateString(),
+    },
+];
+
 root.render(
     <React.StrictMode>
-        <App name={"Arya"} comment={"This is awesome"} date={new Date().toDateString()} />
-        <App name={"Dayat"} comment={"You did well"} date={new Date().toDateString()} />
-        <App name={"Desi"} comment={"WOW!"} date={new Date().toDateString()} />
+        <App data={arr} />
     </React.StrictMode>
 );
 

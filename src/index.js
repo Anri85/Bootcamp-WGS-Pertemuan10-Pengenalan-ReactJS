@@ -1,15 +1,30 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { faker } from "@faker-js/faker";
 
 import App from "./App";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
+const arr = [
+    {
+        name: "Arya",
+        comment: "This is awesome",
+        date: new Date().toDateString(),
+    },
+    {
+        name: "Desi",
+        comment: "You did well",
+        date: new Date().toDateString(),
+    },
+    {
+        name: "Reza",
+        comment: "Congratulation",
+        date: new Date().toDateString(),
+    },
+];
+
 root.render(
     <React.StrictMode>
-        <App name={faker.name.findName()} avatar={faker.image.avatar()} comment={faker.lorem.lines()} date={new Date().toDateString()} />
-        <App name={faker.name.findName()} avatar={faker.image.avatar()} comment={faker.lorem.lines()} date={new Date().toDateString()} />
-        <App name={faker.name.findName()} avatar={faker.image.avatar()} comment={faker.lorem.lines()} date={new Date().toDateString()} />
+        <App data={arr} />
     </React.StrictMode>
 );
 

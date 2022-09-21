@@ -1,24 +1,25 @@
 // import logo from "./logo.svg";
+import { faker } from "@faker-js/faker";
 
-function App({ name, comment, date, avatar }) {
-    return (
-        <div className="ui container comments">
+function App({ data }) {
+    return data.map((d, i) => (
+        <div className="ui container comments" key={i}>
             <div className="comment">
                 <a href="/" className="avatar">
-                    <img src={avatar} alt="avatar" />
+                    <img src={faker.image.avatar()} alt="avatar" />
                 </a>
                 <div className="content">
                     <a href="/" className="author">
-                        {name}
+                        {d.name}
                     </a>
                     <div className="metadata">
-                        <span className="date">{date}</span>
+                        <span className="date">{d.date}</span>
                     </div>
-                    <div className="text">{comment}</div>
+                    <div className="text">{d.comment}</div>
                 </div>
             </div>
         </div>
-    );
+    ));
 }
 
 export default App;
