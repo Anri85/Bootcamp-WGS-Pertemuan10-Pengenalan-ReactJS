@@ -27,7 +27,7 @@ import React from "react";
 // class component with state
 class Comment extends React.Component {
     constructor({ name, date, comment, avatar, key }) {
-        super();
+        super({ name, date, comment, avatar, key });
         this.state = { name, date, comment, avatar, key };
     }
     render() {
