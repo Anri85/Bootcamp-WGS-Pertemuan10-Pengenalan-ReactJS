@@ -10,7 +10,6 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
     <React.StrictMode>
-        {/* konfigurasi agar store dapat digunakan dalam App dengan menggunakan Provider */}
         <Provider store={reducer}>
             <App />
         </Provider>
