@@ -4,9 +4,9 @@ import { Provider } from "react-redux";
 import { createStore, applyMiddleware } from "redux";
 import thunk from "redux-thunk";
 
-import reducer from "./pertemuan 13 redux thunk/reducers";
+import reducer from "./reducers";
 
-import App from "./pertemuan 13 redux thunk/components/App";
+import App from "./App";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 const store = createStore(reducer, applyMiddleware(thunk));
